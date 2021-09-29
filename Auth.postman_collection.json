@@ -1,0 +1,415 @@
+{
+	"info": {
+		"_postman_id": "debcada5-bc96-4920-a806-1b884569226f",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "forgetpassword",
+			"item": [
+				{
+					"name": "send_email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "email",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "mohamedelredeny1@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://hotflix.club/api/password/email",
+							"protocol": "https",
+							"host": [
+								"hotflix",
+								"club"
+							],
+							"path": [
+								"api",
+								"password",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify_code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "769696",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mohamedelredeny1@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://hotflix.club/api/password/verify-code",
+							"protocol": "https",
+							"host": [
+								"hotflix",
+								"club"
+							],
+							"path": [
+								"api",
+								"password",
+								"verify-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset_password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mohamedelredeny1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "769696",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "222222222",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "222222222",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://hotflix.club/api/password/reset",
+							"protocol": "https",
+							"host": [
+								"hotflix",
+								"club"
+							],
+							"path": [
+								"api",
+								"password",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "edit_profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer  6|VOMYMMO0kPv3W0SwI6MvBlAwclmXj1I4QPJ3Lndh",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstname",
+									"value": "moka",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "moka",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "moka",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/M-Elredeny/Desktop/Screenshot 2021-09-17 155545.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://hotflix.club/api/user/profile-setting",
+							"protocol": "https",
+							"host": [
+								"hotflix",
+								"club"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile-setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer  8|kUVeKTjnVnrnMk38jfPCh7oQK2DAHClCrudW8QN3",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "current_password",
+									"value": "222222222",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "moka123123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "moka123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://hotflix.club/api/user/change-password",
+							"protocol": "https",
+							"host": [
+								"hotflix",
+								"club"
+							],
+							"path": [
+								"api",
+								"user",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "mokamoka111",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://hotflix.club/api/login",
+					"protocol": "https",
+					"host": [
+						"hotflix",
+						"club"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstname",
+							"value": "sad",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "sad",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mohamedelredeny111@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123123",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123123123",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "mokamoka1111",
+							"type": "text"
+						},
+						{
+							"key": "ref_by",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "BR",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "Brazil",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mobile_code",
+							"value": "020",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mobile",
+							"value": "01068298953",
+							"type": "text"
+						},
+						{
+							"key": "agree",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://hotflix.club/api/register",
+					"protocol": "https",
+					"host": [
+						"hotflix",
+						"club"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  15|5Ku1SfFAbhlZNz0YX77tcRXU04bzMVqbPvnIxhsM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://hotflix.club/api/user/logout",
+					"protocol": "https",
+					"host": [
+						"hotflix",
+						"club"
+					],
+					"path": [
+						"api",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

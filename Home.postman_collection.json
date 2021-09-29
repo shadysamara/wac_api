@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "d32446e1-b10e-4617-b290-09e47729b48b",
+		"name": "Home",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "Wishlist",
+					"item": [
+						{
+							"name": "mylist",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer  16|csEevBKTKJX20A57oualNp1lNFa9amW2Y7hNaUbd",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://hotflix.club/api/user/wishlist/view",
+									"protocol": "https",
+									"host": [
+										"hotflix",
+										"club"
+									],
+									"path": [
+										"api",
+										"user",
+										"wishlist",
+										"view"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addToList",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer  17|ScX8U3MA3Ga3R9zgGffgWSkVClvSI4pw5TKbG0Ef",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "movie_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://hotflix.club/api/user/wishlistAdd",
+									"protocol": "https",
+									"host": [
+										"hotflix",
+										"club"
+									],
+									"path": [
+										"api",
+										"user",
+										"wishlistAdd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "removeFromList",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer  16|csEevBKTKJX20A57oualNp1lNFa9amW2Y7hNaUbd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "relation_id",
+											"value": "6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://hotflix.club/api/user/wishlist/remove",
+									"protocol": "https",
+									"host": [
+										"hotflix",
+										"club"
+									],
+									"path": [
+										"api",
+										"user",
+										"wishlist",
+										"remove"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Not Important",
+					"item": [
+						{
+							"name": "home",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer  15|5Ku1SfFAbhlZNz0YX77tcRXU04bzMVqbPvnIxhsM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionname",
+											"value": "latest_trailer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://hotflix.club/api/user/homepage",
+									"protocol": "https",
+									"host": [
+										"hotflix",
+										"club"
+									],
+									"path": [
+										"api",
+										"user",
+										"homepage"
+									],
+									"query": [
+										{
+											"key": "Authorization",
+											"value": "Bearer  3|14XE4i2hMUgbvmDI4Mq4CRpUD3mxEUOrsaKq5Mhk",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_home_sections",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://hotflix.club/api/homepage/sections",
+									"protocol": "https",
+									"host": [
+										"hotflix",
+										"club"
+									],
+									"path": [
+										"api",
+										"homepage",
+										"sections"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "all_films",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer  15|5Ku1SfFAbhlZNz0YX77tcRXU04bzMVqbPvnIxhsM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://hotflix.club/api/user/movies/show/all",
+							"protocol": "https",
+							"host": [
+								"hotflix",
+								"club"
+							],
+							"path": [
+								"api",
+								"user",
+								"movies",
+								"show",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer  19|NFONdxrXKT0kV1MGVaLuiZBrPsL5OKYCF4aY37ZZ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sectionname",
+									"value": "top",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://hotflix.club/api/user/homepage",
+							"protocol": "https",
+							"host": [
+								"hotflix",
+								"club"
+							],
+							"path": [
+								"api",
+								"user",
+								"homepage"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer  3|14XE4i2hMUgbvmDI4Mq4CRpUD3mxEUOrsaKq5Mhk",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recently Added",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer  15|5Ku1SfFAbhlZNz0YX77tcRXU04bzMVqbPvnIxhsM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sectionname",
+									"value": "recent_added",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://hotflix.club/api/user/homepage",
+							"protocol": "https",
+							"host": [
+								"hotflix",
+								"club"
+							],
+							"path": [
+								"api",
+								"user",
+								"homepage"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer  3|14XE4i2hMUgbvmDI4Mq4CRpUD3mxEUOrsaKq5Mhk",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "latest_trailer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer  15|5Ku1SfFAbhlZNz0YX77tcRXU04bzMVqbPvnIxhsM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sectionname",
+									"value": "latest_trailer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://hotflix.club/api/user/homepage",
+							"protocol": "https",
+							"host": [
+								"hotflix",
+								"club"
+							],
+							"path": [
+								"api",
+								"user",
+								"homepage"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer  3|14XE4i2hMUgbvmDI4Mq4CRpUD3mxEUOrsaKq5Mhk",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "latest_series",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer  15|5Ku1SfFAbhlZNz0YX77tcRXU04bzMVqbPvnIxhsM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sectionname",
+									"value": "latest_series",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://hotflix.club/api/user/homepage",
+							"protocol": "https",
+							"host": [
+								"hotflix",
+								"club"
+							],
+							"path": [
+								"api",
+								"user",
+								"homepage"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer  3|14XE4i2hMUgbvmDI4Mq4CRpUD3mxEUOrsaKq5Mhk",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "all_categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hotflix.club/api/homepage/allCategories",
+					"protocol": "https",
+					"host": [
+						"hotflix",
+						"club"
+					],
+					"path": [
+						"api",
+						"homepage",
+						"allCategories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "one_category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hotflix.club/api/homepage/category/3",
+					"protocol": "https",
+					"host": [
+						"hotflix",
+						"club"
+					],
+					"path": [
+						"api",
+						"homepage",
+						"category",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "one_film",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  8|Ce1WKRjlfaF8lGCxUDA3BbrdnfvMkjSGenqatvnL",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://hotflix.club/api/homepage/user-movie/2",
+					"protocol": "https",
+					"host": [
+						"hotflix",
+						"club"
+					],
+					"path": [
+						"api",
+						"homepage",
+						"user-movie",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  3|14XE4i2hMUgbvmDI4Mq4CRpUD3mxEUOrsaKq5Mhk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "search",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://hotflix.club/api/homepage/search",
+					"protocol": "https",
+					"host": [
+						"hotflix",
+						"club"
+					],
+					"path": [
+						"api",
+						"homepage",
+						"search"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
